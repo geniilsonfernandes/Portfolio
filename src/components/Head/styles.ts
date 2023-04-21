@@ -42,7 +42,7 @@ export const Subtitle = styled.h2`
     padding-top: ${theme.spacings.small};
     font-size: ${theme.font.sizes.medium};
     font-weight: ${theme.font.small};
-    color: ${theme.colors.text[300]};
+    color: ${theme.colors.text[200]};
     line-height: 2.4rem;
     @media (max-width: ${theme.viewPorts.tablet}) {
       font-size: ${theme.font.sizes.small};
