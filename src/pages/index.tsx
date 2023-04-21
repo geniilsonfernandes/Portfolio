@@ -1,7 +1,6 @@
 /* istanbul ignore file */
-import githubApi from 'service/axios/intance'
-import githubEndpoints from 'service/endpoint'
-import { IRepoResponse, IUserResponse } from 'service/endpoint/type'
+import { gitHub } from 'service/api'
+
 import Home, { HomeProps } from 'templates/Home'
 import { createBaseUrl } from 'utils/createBaseUrl'
 type Props = {
@@ -14,25 +13,16 @@ export default function Index({ repos, user }: Props) {
 }
 
 export async function getServerSideProps() {
-  const user = await githubApi.get<IUserResponse>(
-    githubEndpoints.getUserEndpoint(),
-  )
-  const repos = await githubApi.get<IRepoResponse[]>(
-    githubEndpoints.getReposEndpoint(),
-  )
-
-  const filteredRepos = repos.data.filter(
-    (repo) => repo.topics && repo.topics.includes('port'),
-  )
+  const repos = await gitHub.getRepos('port')
 
   return {
     props: {
-      repos: filteredRepos.map((repo) => ({
+      repos: repos.map((repo) => ({
         ...repo,
         photo: createBaseUrl(repo.name),
         link: repo.html_url,
       })),
-      user: user.data,
+      user: [],
     },
   }
 }

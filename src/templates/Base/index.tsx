@@ -1,3 +1,4 @@
+import Header from 'components/Header'
 import * as S from './styles'
 
 type BaseProps = {
@@ -6,7 +7,10 @@ type BaseProps = {
 const Base = ({ children }: BaseProps) => {
   return (
     <S.Container>
-      <S.Wrapper>{children}</S.Wrapper>
+      <S.Wrapper>
+        <Header />
+        <div>{children}</div>
+      </S.Wrapper>
     </S.Container>
   )
 }

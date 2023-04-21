@@ -16,6 +16,7 @@ export const PhotoWrapper = styled.div<WrapperProps>`
     width: 100%;
     height: ${size === 'small' ? '172px' : '270px'};
     position: relative;
+    cursor: pointer;
   `}
 `
 

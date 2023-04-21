@@ -1,9 +1,7 @@
-import Header from 'components/Header'
-import * as S from './styles'
 import Head from 'components/Head'
 import Project, { ProjectProps } from 'components/Project'
+import * as S from './styles'
 
-import React from 'react'
 import Base from 'templates/Base'
 
 export type HomeProps = {
@@ -15,7 +13,6 @@ export type HomeProps = {
 const Home = ({ repoHighlights, repos }: HomeProps) => {
   return (
     <Base>
-      <Header />
       <Head />
       <S.Wrapper>
         <Project isHighlighted size="large" {...repoHighlights} />
