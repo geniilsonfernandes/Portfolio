@@ -42,7 +42,8 @@ const PROJECT_CONFIG = {
       xxhuge: '5.2rem',
     },
   },
-  boxShadow: '2px 7px 8px rgba(0, 0, 0, 0.15)',
+  boxShadow:
+    ' 0px 0px 0px 1px rgba(24, 24, 27, 0.05), 0px 10px 15px -3px rgba(39, 39, 42, 0.05), 0px 4px 6px -4px rgba(39, 39, 42, 0.05);',
 } as const
 
 const DARK_THEME = {

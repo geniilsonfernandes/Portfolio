@@ -11,7 +11,7 @@ function App({ Component, pageProps }: AppProps) {
     <>
       <ThemeProvider theme={theme}>
         <Head>
-          <title>Habbits </title>
+          <title>Genilson Fernandes</title>
           <link rel="shortcut icon" href="/img/favicon.ico" />
           <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
           <link rel="manifest" href="/manifest.json" />

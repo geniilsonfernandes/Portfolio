@@ -15,7 +15,7 @@ export const Photo = styled.img`
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    box-shadow: 5px 5px 13px 3px #08080814;
+    box-shadow: ${theme.boxShadow};
 
     @media (max-width: ${theme.viewPorts.tablet}) {
       width: 48px;
@@ -42,8 +42,8 @@ export const Subtitle = styled.h2`
     padding-top: ${theme.spacings.small};
     font-size: ${theme.font.sizes.medium};
     font-weight: ${theme.font.small};
-    line-height: 2.4rem;
     color: ${theme.colors.text[300]};
+    line-height: 2.4rem;
     @media (max-width: ${theme.viewPorts.tablet}) {
       font-size: ${theme.font.sizes.small};
     }
