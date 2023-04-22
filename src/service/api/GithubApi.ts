@@ -44,13 +44,20 @@ class GithubApi {
       ),
     )
 
-    const regex = /!\[(.*?)\]\((.*?)\)/g
-    const newContent = content.replace(
-      regex,
+    const regexToImg = /(<img[^>]+)src="([^"]+)"([^>]*>)/g
+    const replaceImage = content.replace(
+      regexToImg,
       `<img alt="$1" src="https://raw.githubusercontent.com/${this.username}/${repoName}/main/$2" style="max-height: 300px;">`,
     )
 
-    return newContent
+    const regexToCode = /```([\s\S]*?)```/g
+
+    const finalContent = replaceImage.replace(
+      regexToCode,
+      '<pre><code>$1</code></pre>',
+    )
+
+    return finalContent
   }
 }
 
