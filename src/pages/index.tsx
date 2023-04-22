@@ -5,7 +5,7 @@ import Home, { HomeProps } from 'templates/Home'
 import { createBaseUrl } from 'utils/createBaseUrl'
 type Props = {
   repos: HomeProps['repos']
-  user: []
+  user: HomeProps['user']
 }
 
 export default function Index({ repos, user }: Props) {
@@ -15,6 +15,18 @@ export default function Index({ repos, user }: Props) {
 export async function getServerSideProps() {
   const repos = await gitHub.getRepos('port')
 
+  const user = {
+    userPhoto: repos[0].owner.avatar_url,
+    title: 'Desenvolvedor Full-stack',
+    subtitle: `Com anos de experiência em desenvolvimento Front-end e
+        Full-stack, sou especialista em criar experiências digitais
+        incríveis.sou capaz de oferecer soluções robustas e eficientes para
+        transformar sua visão em realidade. Vamos colaborar juntos para criar
+        uma presença digital de sucesso para sua empresa.`,
+    highlight:
+      'Experiência em ReactJS, NextJs, Javascript, TypeScript e NodeJs.',
+  } as HomeProps['user']
+
   return {
     props: {
       repos: repos.map((repo) => ({
@@ -22,7 +34,7 @@ export async function getServerSideProps() {
         photo: createBaseUrl(repo.name),
         link: repo.html_url,
       })),
-      user: [],
+      user: user,
     },
   }
 }

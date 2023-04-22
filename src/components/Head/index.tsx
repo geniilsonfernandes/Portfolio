@@ -1,28 +1,34 @@
+import { Subtitle, Title } from 'components/styles'
 import * as S from './styles'
+
+export type HeadProps = {
+  userPhoto: string
+  title: string
+  subtitle: string
+  highlight: string
+}
 
 const socialButtons = [
   {
     icon: <S.GitHubIcon />,
-    url: 'e',
+    url: 'https://github.com/geniilsonfernandes',
   },
   {
     icon: <S.LinkedInIcon />,
-    url: '31',
+    url: 'https://www.linkedin.com/in/genilson-fernandes/',
   },
   {
     icon: <S.TwitterIcon />,
-    url: '312',
+    url: 'https://twitter.com/genilsonf_',
   },
 ]
-const Head = () => (
+
+const Head = ({ highlight, subtitle, title, userPhoto }: HeadProps) => (
   <S.Wrapper>
-    <S.Photo src="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png?20170328184010" />
-    <S.Title>Software designer, founder, and</S.Title>
-    <S.Subtitle>
-      I’m Spencer, a software designer and entrepreneur based in New York City.
-      I’m Spencer, a software designer and entrepreneur based in New York City.
-      I’m Spencer, a software designer and entrepreneur based in New York City.
-    </S.Subtitle>
+    <S.Photo src={userPhoto} alt={title} />
+    <Title>{title}</Title>
+    <Subtitle>{subtitle}</Subtitle>
+    <Subtitle highlight>{highlight}</Subtitle>
     <S.Social>
       {socialButtons.map((button) => (
         <>

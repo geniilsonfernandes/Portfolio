@@ -17,9 +17,14 @@ export const MenuWrapper = styled.div`
     border-radius: 20px;
 
     padding: 0 ${theme.spacings.xsmall};
+    align-items: center;
+    justify-content: space-between;
   `}
 `
-
+export const MenuList = styled.div`
+  display: flex;
+  gap: 16px;
+`
 export const MenuLink = styled.a<MenuItem>`
   ${({ theme, active }) => css`
     display: block;
@@ -134,5 +139,14 @@ export const CloseMenu = styled(MdClose)`
     &:hover {
       color: ${theme.colors.primary[100]};
     }
+  `}
+`
+
+export const FooterOwner = styled.p`
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.xsmall};
+    font-weight: ${theme.font.small};
+    color: ${theme.colors.text[100]};
+    text-align: center;
   `}
 `

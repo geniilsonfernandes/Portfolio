@@ -1,5 +1,6 @@
 import Header from 'components/Header'
 import * as S from './styles'
+import Footer from 'components/Footer'
 
 type BaseProps = {
   children: React.ReactNode
@@ -10,6 +11,7 @@ const Base = ({ children }: BaseProps) => {
       <S.Wrapper>
         <Header />
         <div>{children}</div>
+        <Footer />
       </S.Wrapper>
     </S.Container>
   )

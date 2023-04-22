@@ -1,9 +1,16 @@
 import MediaComponent from 'components/MediaComponent'
 import * as S from './styles'
 import useModal from 'hook/useModal'
-import { RiArrowDropDownLine } from 'react-icons/ri'
+import { RiArrowDropDownLine, RiArrowDropLeftFill } from 'react-icons/ri'
+import { useRouter } from 'next/router'
 
-const Menu = () => {
+type MenuProps = {
+  footer?: boolean
+}
+
+const Menu = ({ footer }: MenuProps) => {
+  const router = useRouter()
+  const isHome = router.pathname === '/'
   const { closeModal, openModal, isOpen } = useModal()
 
   const handleOpenMenu = () => {
@@ -22,44 +29,67 @@ const Menu = () => {
     }
   }
 
+  const handleBackClick = () => {
+    router.back()
+  }
+
   return (
     <>
-      <S.MenuWrapper>
-        <MediaComponent mediaQuery="(max-width: 768px)">
-          <S.Button onClick={handleOpenMenu}>
-            Menu <RiArrowDropDownLine size={20} />
-          </S.Button>
-        </MediaComponent>
+      {isHome ? (
+        <>
+          <S.MenuWrapper>
+            <MediaComponent mediaQuery="(max-width: 768px)">
+              <S.Button onClick={handleOpenMenu}>
+                Menu <RiArrowDropDownLine size={20} />
+              </S.Button>
+            </MediaComponent>
+            <S.MenuList>
+              <MediaComponent mediaQuery="(min-width: 768px)">
+                <S.MenuLink href="#projects">Projects</S.MenuLink>
+                <S.MenuLink href="#about">About</S.MenuLink>
+                <S.MenuLink href="#skills">Skills</S.MenuLink>
+              </MediaComponent>
+            </S.MenuList>
 
-        <MediaComponent mediaQuery="(min-width: 768px)">
-          <S.MenuLink href="#home">Home</S.MenuLink>
-          <S.MenuLink href="#projects">Projects</S.MenuLink>
-          <S.MenuLink href="#about">About</S.MenuLink>
-          <S.MenuLink href="#skills">Skills</S.MenuLink>
-        </MediaComponent>
-      </S.MenuWrapper>
-      {isOpen && (
-        <S.Overlay>
-          <S.OverlayClick onClick={handleCloseMenu} />
-          <S.MenuFullWrapper>
-            <S.MenuFullHead>
-              <S.CloseMenu onClick={handleCloseMenu} />
-            </S.MenuFullHead>
+            {footer && (
+              <S.FooterOwner>genilsonfernandes.dev © 2023</S.FooterOwner>
+            )}
+          </S.MenuWrapper>
+          {isOpen && (
+            <S.Overlay>
+              <S.OverlayClick onClick={handleCloseMenu} />
+              <S.MenuFullWrapper>
+                <S.MenuFullHead>
+                  <S.CloseMenu onClick={handleCloseMenu} />
+                </S.MenuFullHead>
 
-            <S.MenuLink href="#home" onClick={handleMenuClick}>
-              Home
-            </S.MenuLink>
-            <S.MenuLink href="#projects" onClick={handleMenuClick}>
-              Projects
-            </S.MenuLink>
-            <S.MenuLink href="#about" onClick={handleMenuClick}>
-              About
-            </S.MenuLink>
-            <S.MenuLink href="#skills" onClick={handleMenuClick}>
-              Skills
-            </S.MenuLink>
-          </S.MenuFullWrapper>
-        </S.Overlay>
+                <S.MenuLink href="#home" onClick={handleMenuClick}>
+                  Home
+                </S.MenuLink>
+                <S.MenuLink href="#projects" onClick={handleMenuClick}>
+                  Projects
+                </S.MenuLink>
+                <S.MenuLink href="#about" onClick={handleMenuClick}>
+                  About
+                </S.MenuLink>
+                <S.MenuLink href="#skills" onClick={handleMenuClick}>
+                  Skills
+                </S.MenuLink>
+              </S.MenuFullWrapper>
+            </S.Overlay>
+          )}
+        </>
+      ) : (
+        <>
+          <S.MenuWrapper>
+            <S.Button onClick={handleBackClick}>
+              Voltar <RiArrowDropLeftFill size={20} />
+            </S.Button>
+            {footer && (
+              <S.FooterOwner>Genilsonfernandes.dev © 2023</S.FooterOwner>
+            )}
+          </S.MenuWrapper>
+        </>
       )}
     </>
   )

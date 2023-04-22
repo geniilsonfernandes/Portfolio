@@ -24,32 +24,6 @@ export const Photo = styled.img`
   `}
 `
 
-export const Title = styled.h1`
-  ${({ theme }) => css`
-    font-size: ${theme.font.sizes.xhuge};
-    font-weight: ${theme.font.bold};
-    color: ${theme.colors.text[100]};
-    padding-top: ${theme.spacings.small};
-
-    @media (max-width: ${theme.viewPorts.tablet}) {
-      font-size: ${theme.font.sizes.huge};
-    }
-  `}
-`
-
-export const Subtitle = styled.h2`
-  ${({ theme }) => css`
-    padding-top: ${theme.spacings.small};
-    font-size: ${theme.font.sizes.medium};
-    font-weight: ${theme.font.small};
-    color: ${theme.colors.text[200]};
-    line-height: 2.4rem;
-    @media (max-width: ${theme.viewPorts.tablet}) {
-      font-size: ${theme.font.sizes.small};
-    }
-  `}
-`
-
 export const IconWrapper = styled.a`
   ${({ theme }) => css`
     background: transparent;

@@ -1,9 +1,8 @@
 import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.div`
-  ${({ theme }) => css`
-    padding: 96px 0;
-  `}
+  padding: 48px 0;
+  padding-top: 94px;
 `
 export const Grid = styled.div`
   ${({ theme }) => css`

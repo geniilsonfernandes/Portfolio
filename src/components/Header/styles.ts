@@ -17,7 +17,9 @@ export const Wrapper = styled.nav`
 
 export const LogoIcon = styled(Logo)``
 
-export const LogoWrapper = styled.div``
+export const LogoWrapper = styled.div`
+  cursor: pointer;
+`
 
 export const MenuWrapper = styled.div`
   ${({ theme }) => css`

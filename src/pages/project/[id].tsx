@@ -4,7 +4,7 @@ import { gitHub } from 'service/api'
 import Project from 'templates/Project'
 
 type Props = {
-  readme: any
+  readme: string
 }
 
 function Index({ readme }: Props) {

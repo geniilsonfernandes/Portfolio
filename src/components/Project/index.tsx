@@ -27,7 +27,7 @@ const Project = ({
   }
 
   return (
-    <S.Wrapper onClick={handleCardClick}>
+    <S.Wrapper onClick={handleCardClick} id="projects">
       <S.PhotoWrapper size={size}>
         <S.ProjectPhoto alt={name} src={photo} />
         {isHighlighted && (

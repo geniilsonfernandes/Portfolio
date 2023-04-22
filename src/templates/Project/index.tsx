@@ -1,15 +1,12 @@
-import * as S from './styles'
 import Base from 'templates/Base'
-
-import ReactMarkdown from 'react-markdown'
-import remarkGfm from 'remark-gfm'
+import * as S from './styles'
 
 type ProjectProps = {
   projectName: string
   readme: string
 }
 
-const Project = ({ projectName, readme }: ProjectProps) => {
+const Project = ({ readme }: ProjectProps) => {
   return (
     <Base>
       <S.Wrapper>
