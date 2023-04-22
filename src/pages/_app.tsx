@@ -13,9 +13,24 @@ function App({ Component, pageProps }: AppProps) {
         <Head>
           <title>Genilson Fernandes</title>
           <link rel="shortcut icon" href="/img/favicon.ico" />
-          <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
-          <link rel="manifest" href="/manifest.json" />
-          <meta name="description" content="Habbits" />
+
+          <meta
+            name="description"
+            content="Sou especialista em criar experiências digitais
+        incríveis. sou capaz de oferecer soluções robustas e eficientes para
+        transformar sua visão em realidade. Vamos colaborar juntos para criar
+        uma presença digital de sucesso para sua empresa."
+          />
+
+          <meta property="og:title" content="Genilson Fernandes" />
+          <meta
+            property="og:description"
+            content="Sou especialista em criar experiências digitais
+        incríveis."
+          />
+          <meta property="og:image" content="/img/grportfolio.png" />
+          <meta property="og:type" content="website" />
+          <meta property="og:site_name" content="Genilson Fernandes" />
 
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link

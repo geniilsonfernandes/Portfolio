@@ -18,9 +18,8 @@ export async function getServerSideProps() {
   const user = {
     userPhoto: repos[0].owner.avatar_url,
     title: 'Desenvolvedor Full-stack',
-    subtitle: `Com anos de experiência em desenvolvimento Front-end e
-        Full-stack, sou especialista em criar experiências digitais
-        incríveis.sou capaz de oferecer soluções robustas e eficientes para
+    subtitle: `Sou especialista em criar experiências digitais
+        incríveis. Sou capaz de oferecer soluções robustas e eficientes para
         transformar sua visão em realidade. Vamos colaborar juntos para criar
         uma presença digital de sucesso para sua empresa.`,
     highlight:

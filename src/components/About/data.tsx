@@ -39,10 +39,6 @@ export const skills = [
     icon: <S.StyledComponentsIcon />,
   },
   {
-    name: 'Node.js',
-    icon: <S.NodeIcon />,
-  },
-  {
     name: 'ts-node',
     icon: <S.TsNodeIcon />,
   },
