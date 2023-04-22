@@ -60,6 +60,7 @@ export const Wrapper = styled.div`
       font-size: ${theme.font.sizes.medium};
       font-family: ${theme.font.family};
       white-space: pre-wrap;
+      overflow: scroll;
     }
 
     ul {
