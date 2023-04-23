@@ -26,9 +26,14 @@ export async function getServerSideProps() {
       'Experiência em ReactJS, NextJs, Javascript, TypeScript e NodeJs.',
   } as HomeProps['user']
 
+  const orderedReposByMoreRecent = repos.sort(
+    (a, b) =>
+      new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime(),
+  )
+
   return {
     props: {
-      repos: repos.map((repo) => ({
+      repos: orderedReposByMoreRecent.map((repo) => ({
         ...repo,
         photo: createBaseUrl(repo.name),
         link: repo.html_url,
