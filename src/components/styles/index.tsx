@@ -63,7 +63,7 @@ export const Button = styled.button`
     justify-content: center;
     gap: 8px;
 
-    background: ${theme.colors.background[200]};
+    background: ${theme.colors.background[700]};
     color: ${theme.colors.text[100]};
     width: 100%;
     height: 3.2rem;
@@ -76,10 +76,20 @@ export const Button = styled.button`
     transition: ${theme.transitions.bounce};
 
     &:hover {
-      background: ${theme.colors.background[300]};
+      background: ${theme.colors.background[600]};
     }
     border: none;
     outline: none;
     cursor: pointer;
+  `}
+`
+
+export const Box = styled.div`
+  ${({ theme }) => css`
+    background: ${theme.colors.background[800]};
+    border: 1px solid ${theme.colors.background[700]};
+
+    border-radius: ${theme.radius.md};
+    padding: ${theme.spacings.xsmall};
   `}
 `

@@ -15,3 +15,14 @@ export const Grid = styled.div`
     }
   `}
 `
+
+export const Title = styled.h1`
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.xxlarge};
+    color: ${theme.colors.text[100]};
+
+    text-transform: capitalize;
+
+    margin-bottom: ${theme.spacings.medium};
+  `}
+`

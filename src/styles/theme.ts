@@ -69,43 +69,6 @@ const DARK_THEME = {
     200: '#B4B4B4',
     100: '#D2D2D2',
   },
-  error: {
-    100: '#DD2626',
-    200: '#662020',
-  },
-  success: {
-    100: '#43AB65',
-    200: '#22442C',
-  },
-  warning: {
-    100: '#F0B23A',
-    200: '#4B3C1D',
-  },
-} as const
-
-const LIGHT_THEME = {
-  text: {
-    100: '#333333',
-    200: '#4F4F4F',
-    300: '#6E6E6E',
-    400: '#8C8C8C',
-    500: '#A2A2A2',
-    600: '#BEBEBE',
-    700: '#D8D8D8',
-    800: '#F2F2F2',
-    900: '#FCFCFD',
-  },
-  background: {
-    100: '#FCFCFD',
-    200: '#F2F2F2',
-    300: '#D8D8D8',
-    400: '#B4B4B4',
-    500: '#8C8C8C',
-    600: '#eeeeee',
-    700: '#484848',
-    800: '#333333',
-    900: '#181818',
-  },
   primary: {
     100: '#3ED4C5',
     200: '#52DFD5',
@@ -134,17 +97,12 @@ const LIGHT_THEME = {
   },
 } as const
 
-export const LIGHT = {
-  colors: LIGHT_THEME,
-  ...PROJECT_CONFIG,
-} as const
-
 export const DARK = {
   colors: DARK_THEME,
   ...PROJECT_CONFIG,
 } as const
 
 export default {
-  colors: LIGHT_THEME,
+  colors: DARK_THEME,
   ...PROJECT_CONFIG,
 } as const

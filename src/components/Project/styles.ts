@@ -1,22 +1,30 @@
 import styled, { css } from 'styled-components'
 
-import { AiOutlineLink } from 'react-icons/ai'
+import { AiOutlineLink, AiFillGithub } from 'react-icons/ai'
 import { MdWorkspacePremium } from 'react-icons/md'
+import { Box } from 'components/styles'
 
 export type WrapperProps = {
   size?: 'small' | 'large'
 }
 
-export const Wrapper = styled.div``
+export const Wrapper = styled(Box)``
 
 export const PhotoWrapper = styled.div<WrapperProps>`
-  ${({ theme, size }) => css`
+  ${({ theme }) => css`
     background: ${theme.colors.background[200]};
     border-radius: ${theme.radius.md};
     width: 100%;
-    height: ${size === 'small' ? '172px' : '270px'};
+    height: 100px;
     position: relative;
     cursor: pointer;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: ${theme.radius.md};
+    }
   `}
 `
 
@@ -39,62 +47,47 @@ export const StampWrapper = styled.div`
   justify-content: center;
 `
 
-export const ProjectPhoto = styled.img`
+export const Title = styled.h1<WrapperProps>`
   ${({ theme }) => css`
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: ${theme.radius.md};
+    font-size: ${theme.font.sizes.xxlarge};
+    color: ${theme.colors.text[100]};
+
+    text-transform: capitalize;
   `}
 `
 
 export const ProjectInfo = styled.div<WrapperProps>`
-  ${({ theme, size }) => css`
-    padding: ${theme.spacings.xsmall} 8px;
-
+  ${({ theme }) => css`
     display: flex;
-    justify-content: space-between;
-    align-items: start;
-    flex-direction: ${size === 'small' ? 'column' : 'row'};
-
-    cursor: pointer;
-    background: transparent;
-    transition: ${theme.transitions.ease_in_out};
-
-    &:hover {
-      background: ${theme.colors.background[200]};
-      border-radius: ${theme.radius.md};
-    }
-
-    @media (max-width: ${theme.viewPorts.tablet}) {
-      flex-direction: column;
-      gap: ${theme.spacings.xxsmall};
-    }
-  `}
-`
-
-export const Title = styled.h1<WrapperProps>`
-  ${({ theme, size }) => css`
-    font-size: ${size === 'small'
-      ? theme.font.sizes.large
-      : theme.font.sizes.xxlarge};
-    color: ${theme.colors.text[100]};
+    flex-direction: column;
+    gap: ${theme.spacings.xxsmall};
+    padding-top: ${theme.spacings.xxsmall};
   `}
 `
 
 export const Description = styled.p`
   ${({ theme }) => css`
-    padding: ${theme.spacings.xxsmall} 0;
+    color: ${theme.colors.text[600]};
     font-size: ${theme.font.sizes.small};
-    font-weight: ${theme.font.small};
-    line-height: 2.4rem;
-    color: ${theme.colors.text[300]};
-
-    max-width: 400px;
+    text-align: justify;
+    line-height: 1.5;
   `}
 `
 
-export const GitHubIcon = styled(AiOutlineLink)`
+export const Links = styled.div`
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 16px;
+`
+
+export const GitHubIcon = styled(AiFillGithub)`
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.xlarge};
+    color: inherit;
+  `}
+`
+export const LineLinkIcon = styled(AiOutlineLink)`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.xlarge};
     color: inherit;
@@ -110,10 +103,27 @@ export const ProjectLink = styled.a`
 
     transition: ${theme.transitions.bounce};
 
+    text-transform: capitalize;
+
     &:hover {
       color: ${theme.colors.primary[400]};
     }
 
     cursor: pointer;
+  `}
+`
+
+export const Tags = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+`
+export const Tag = styled.div`
+  ${({ theme }) => css`
+    background: ${theme.colors.background[700]};
+    border-radius: ${theme.radius.md};
+    padding: 8px 8px;
+    color: ${theme.colors.text[100]};
+    font-size: ${theme.font.sizes.xsmall};
   `}
 `

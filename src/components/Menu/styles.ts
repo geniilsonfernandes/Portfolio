@@ -12,8 +12,8 @@ export const MenuWrapper = styled.div`
     gap: 16px;
     height: 40px;
 
-    background: hsla(0, 0%, 100%, 0.726);
-    border: 1px solid ${theme.colors.background[300]};
+    background: ${theme.colors.background[800]};
+    border: 1px solid ${theme.colors.background[700]};
     border-radius: 20px;
 
     padding: 0 ${theme.spacings.xsmall};
@@ -106,7 +106,7 @@ export const MenuFullWrapper = styled.div`
     position: absolute;
 
     display: flex;
-    background: ${theme.colors.background[100]};
+    background: ${theme.colors.background[800]};
 
     flex-direction: column;
     gap: ${theme.spacings.small};

@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
 
 export const Container = styled.div`
   ${({ theme }) => css`
-    background: ${theme.colors.background[100]};
+    background: ${theme.colors.background[900]};
     padding: 0 ${theme.spacings.xsmall};
 
     position: relative;

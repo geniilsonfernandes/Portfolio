@@ -11,18 +11,19 @@ export type HomeProps = {
   user: HeadProps
 }
 
-const Home = ({ repoHighlights, repos, user }: HomeProps) => {
+const Home = ({ repos, user }: HomeProps) => {
   return (
     <Base>
       <Head {...user} />
-      <S.Wrapper>
-        <Project isHighlighted size="large" {...repoHighlights} />
+
+      <S.Wrapper id="projetos">
+        <S.Title>Portfólio</S.Title>
+        <S.Grid>
+          {repos.map((item) => (
+            <Project key={item.id} {...item} size="small" />
+          ))}
+        </S.Grid>
       </S.Wrapper>
-      <S.Grid>
-        {repos.map((item) => (
-          <Project key={item.id} {...item} size="small" />
-        ))}
-      </S.Grid>
       <About />
     </Base>
   )

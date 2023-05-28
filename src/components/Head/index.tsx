@@ -31,11 +31,9 @@ const Head = ({ highlight, subtitle, title, userPhoto }: HeadProps) => (
     <Subtitle highlight>{highlight}</Subtitle>
     <S.Social>
       {socialButtons.map((button) => (
-        <>
-          <S.IconWrapper key={button.url} href={button.url} target="_blank">
-            {button.icon}
-          </S.IconWrapper>
-        </>
+        <S.IconWrapper key={button.url} href={button.url} target="_blank">
+          {button.icon}
+        </S.IconWrapper>
       ))}
     </S.Social>
   </S.Wrapper>

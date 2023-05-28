@@ -1,6 +1,5 @@
 import Stamp from 'components/Stamp'
 import * as S from './styles'
-import { useRouter } from 'next/router'
 
 export type ProjectProps = {
   id?: string | number
@@ -10,26 +9,27 @@ export type ProjectProps = {
   link: string
   photo: string
   repo: string
+  topics: string[]
 } & S.WrapperProps
 
 const Project = ({
   isHighlighted = false,
-  size = 'small',
-  description,
   link,
   photo,
   name,
+  description,
+  topics,
 }: ProjectProps) => {
-  const router = useRouter()
-
-  const handleCardClick = () => {
-    router.push(`/project/${name}`)
+  const createLink = (name: string) => {
+    return `https://${name}.vercel.app/`
   }
 
+  const filteredTopics = topics.filter((topic) => topic !== 'port').slice(0, 4)
+
   return (
-    <S.Wrapper onClick={handleCardClick} id="projects">
-      <S.PhotoWrapper size={size}>
-        <S.ProjectPhoto alt={name} src={photo} />
+    <S.Wrapper>
+      <S.PhotoWrapper>
+        <img alt={name} src={photo} />
         {isHighlighted && (
           <S.StampWrapper>
             <S.PremiumStamp />
@@ -37,15 +37,24 @@ const Project = ({
           </S.StampWrapper>
         )}
       </S.PhotoWrapper>
-      <S.ProjectInfo size={size}>
-        <div>
-          <S.Title size={size}>{name}</S.Title>
-          <S.Description>{description}</S.Description>
-        </div>
-        <S.ProjectLink href={link} target="_blank">
-          <S.GitHubIcon />
-          {name}
-        </S.ProjectLink>
+      <S.ProjectInfo>
+        <S.Tags>
+          {filteredTopics.map((topic, index) => (
+            <S.Tag key={index}>{topic}</S.Tag>
+          ))}
+        </S.Tags>
+        <S.Title>{name}</S.Title>
+        <S.Description>{description}</S.Description>
+        <S.Links>
+          <S.ProjectLink href={link} target="_blank">
+            <S.GitHubIcon />
+            {name}
+          </S.ProjectLink>
+          <S.ProjectLink href={createLink(name)} target="_blank">
+            <S.LineLinkIcon />
+            Preview
+          </S.ProjectLink>
+        </S.Links>
       </S.ProjectInfo>
     </S.Wrapper>
   )

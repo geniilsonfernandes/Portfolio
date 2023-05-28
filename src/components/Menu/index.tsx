@@ -45,8 +45,8 @@ const Menu = ({ footer }: MenuProps) => {
             </MediaComponent>
             <S.MenuList>
               <MediaComponent mediaQuery="(min-width: 768px)">
-                <S.MenuLink href="#projects">Projects</S.MenuLink>
-                <S.MenuLink href="#about">About</S.MenuLink>
+                <S.MenuLink href="#projetos">Projetos</S.MenuLink>
+                <S.MenuLink href="#about">Sobre</S.MenuLink>
                 <S.MenuLink href="#skills">Skills</S.MenuLink>
               </MediaComponent>
             </S.MenuList>

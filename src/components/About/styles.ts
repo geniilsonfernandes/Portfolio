@@ -19,6 +19,7 @@ import {
   SiVuedotjs,
 } from 'react-icons/si'
 import theme from 'styles/theme'
+import { Box as BoxCustom } from 'components/styles'
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
@@ -53,16 +54,12 @@ export const RightSide = styled.div`
   `}
 `
 
-export const Box = styled.div`
+export const Box = styled(BoxCustom)`
   ${({ theme }) => css`
     gap: 16px;
     width: 100%;
     max-width: 450px;
-    background: hsla(0, 0%, 100%, 0.726);
-    border: 1px solid ${theme.colors.background[300]};
 
-    border-radius: ${theme.radius.md};
-    padding: ${theme.spacings.xsmall};
     @media (max-width: ${theme.viewPorts.tablet}) {
       max-width: 100%;
     }
@@ -98,14 +95,14 @@ export const IconsGrid = styled.div`
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 16px;
     @media (max-width: ${theme.viewPorts.tablet}) {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(5, 1fr);
     }
   `}
 `
 
 const stylesIcon = css`
   font-size: 3.4rem;
-  color: ${theme.colors.background[500]};
+  color: ${theme.colors.background[100]};
 
   transition: ${theme.transitions.bounce};
 

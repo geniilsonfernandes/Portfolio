@@ -9,6 +9,8 @@ type Props = {
 }
 
 export default function Index({ repos, user }: Props) {
+  console.log(repos)
+
   return <Home repoHighlights={repos[0]} repos={repos} user={user} />
 }
 
@@ -18,17 +20,14 @@ export async function getServerSideProps() {
   const user = {
     userPhoto: repos[0].owner.avatar_url,
     title: 'Desenvolvedor Full-stack',
-    subtitle: `Sou especialista em criar experiências digitais
-        incríveis. Sou capaz de oferecer soluções robustas e eficientes para
-        transformar sua visão em realidade. Vamos colaborar juntos para criar
-        uma presença digital de sucesso para sua empresa.`,
-    highlight:
-      'Experiência em ReactJS, NextJs, Javascript, TypeScript e NodeJs.',
+    subtitle: `Sou um desenvolvedor front-end com 2 anos de experiência na criação de interfaces de usuário atraentes e
+responsivas para sites e aplicativos web.`,
+    highlight: `Tenho conhecimento em JavaScript, ReactJs, TypeScript,
+StyledComponents, NextJs, NodeJs, Jest, Testing Library e GIT`,
   } as HomeProps['user']
 
   const orderedReposByMoreRecent = repos.sort(
-    (a, b) =>
-      new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime(),
+    (a, b) => new Date(b.pushed_at).getTime() - new Date(a.pushed_at).getTime(),
   )
 
   return {
