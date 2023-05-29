@@ -27,7 +27,8 @@ StyledComponents, NextJs, NodeJs, Jest, Testing Library e GIT`,
   } as HomeProps['user']
 
   const orderedReposByMoreRecent = repos.sort(
-    (a, b) => new Date(b.pushed_at).getTime() - new Date(a.pushed_at).getTime(),
+    (a, b) =>
+      new Date(b.created_at).getTime() - new Date(a.created_at).getTime(),
   )
 
   return {

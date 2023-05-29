@@ -24,7 +24,7 @@ const Project = ({
     return `https://${name}.vercel.app/`
   }
 
-  const filteredTopics = topics.filter((topic) => topic !== 'port').slice(0, 4)
+  const filteredTopics = topics.filter((topic, index) => topic !== 'port')
 
   return (
     <S.Wrapper>
