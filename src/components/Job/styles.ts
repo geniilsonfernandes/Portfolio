@@ -71,7 +71,7 @@ export const Job = styled.h4`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.small};
     font-weight: ${theme.font.normal};
-    color: ${theme.colors.text[300]};
+    color: ${theme.colors.text[100]};
   `}
 `
 
@@ -91,6 +91,7 @@ export const Cases = styled.div`
     gap: ${theme.spacings.xxsmall};
 
     margin-top: ${theme.spacings.xxsmall};
+    color: ${theme.colors.text[700]};
   `}
 `
 

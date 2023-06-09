@@ -13,17 +13,9 @@ export type JobProps = {
   }[]
 }
 
-const Job = ({
-  company,
-  companyLogo,
-  job,
-  Description,
-  cases,
-  period,
-}: JobProps) => {
+const Job = ({ company, job, Description, cases, period }: JobProps) => {
   return (
     <S.Wrapper>
-      <S.Photo alt={company} src={companyLogo} />
       <S.RightSide>
         <S.JobWrapper>
           <div>

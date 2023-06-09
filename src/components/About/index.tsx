@@ -68,16 +68,17 @@ const About = () => {
     <S.Wrapper id="about">
       <S.LeftSide>
         <S.Description>
-          <Title>O lado pessoa</Title>
+          <Title>O lado pessoal</Title>
           <Subtitle>
-            Desde que comecei a trabalhar com desenvolvimento Front-end e
-            Full-stack, venho me dedicando a aprender e aplicar as melhores
-            práticas para entregar projetos robustos e eficientes.
+            Desde que iniciei minha jornada no desenvolvimento Front-end e
+            Full-stack, tenho me empenhado em aprender e aplicar as melhores
+            práticas, visando entregar projetos robustos e eficientes.
             <br />
             <br />
-            Quando não estou codificando, você pode me encontrar jogando ou
-            lendo livros de ficcao científica. E é assim que equilibro minha
-            vida profissional com minha paixão por outras atividades.
+            Quando não estou codificando, é possível me encontrar envolvido em
+            jogos ou imerso na leitura de livros de ficção científica. Essa é a
+            forma como equilibro minha vida profissional com minha paixão por
+            outras atividades.
           </Subtitle>
         </S.Description>
       </S.LeftSide>

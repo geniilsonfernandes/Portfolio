@@ -23,7 +23,7 @@ export async function getServerSideProps() {
     subtitle: `Sou um desenvolvedor front-end com 2 anos de experiência na criação de interfaces de usuário atraentes e
 responsivas para sites e aplicativos web.`,
     highlight: `Tenho conhecimento em JavaScript, ReactJs, TypeScript,
-StyledComponents, NextJs, NodeJs, Jest, Testing Library e GIT`,
+    StyledComponents, NextJs, NodeJs, Jest, Testing Library e GIT`,
   } as HomeProps['user']
 
   const orderedReposByMoreRecent = repos.sort(
