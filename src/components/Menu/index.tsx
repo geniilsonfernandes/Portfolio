@@ -1,8 +1,8 @@
 import MediaComponent from 'components/MediaComponent'
-import * as S from './styles'
 import useModal from 'hook/useModal'
-import { RiArrowDropDownLine, RiArrowDropLeftFill } from 'react-icons/ri'
 import { useRouter } from 'next/router'
+import { RiArrowDropLeftFill } from 'react-icons/ri'
+import * as S from './styles'
 
 type MenuProps = {
   footer?: boolean
@@ -39,9 +39,7 @@ const Menu = ({ footer }: MenuProps) => {
         <>
           <S.MenuWrapper>
             <MediaComponent mediaQuery="(max-width: 768px)">
-              <S.Button onClick={handleOpenMenu}>
-                Menu <RiArrowDropDownLine size={20} />
-              </S.Button>
+              <S.Button onClick={handleOpenMenu}>Menu</S.Button>
             </MediaComponent>
             <S.MenuList>
               <MediaComponent mediaQuery="(min-width: 768px)">

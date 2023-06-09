@@ -19,7 +19,7 @@ export async function getServerSideProps() {
 
   const user = {
     userPhoto: repos[0].owner.avatar_url,
-    title: 'Desenvolvedor Full-stack',
+    title: 'Desenvolvedor Full Stack',
     subtitle: `Sou um desenvolvedor front-end com 2 anos de experiência na criação de interfaces de usuário atraentes e
 responsivas para sites e aplicativos web.`,
     highlight: `Tenho conhecimento em JavaScript, ReactJs, TypeScript,
