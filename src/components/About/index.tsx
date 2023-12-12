@@ -80,17 +80,17 @@ const About = () => {
           <Title>Quem sou eu</Title>
           <Subtitle>
             Olá! Sou um profissional apaixonado por tecnologia, meu contato com
-            tecnologia começou designer gráfico. Tive a oportunidade de
+            tecnologia começou com designer gráfico. Tive a oportunidade de
             mergulhar no universo do desenvolvimento web, onde pude participar e
             desenvolver minhas habilidades em UX/UI. Hoje posso aproveita todo
-            esse conhecimento como designer no mundo do desenvolvimento
+            esse conhecimento para ser desenvolvedor Full Stack.
           </Subtitle>
           <Subtitle>
-            Minha jornada no desenvolvimento me proporcionou uma valiosa
-            experiência na compreensão de processos e na resolução de problemas
-            complexos. Ao longo desse tempo, busquei constantemente entregar
-            soluções de alta qualidade, Sempre estou em busca de aprimorar
-            minhas habilidades técnicas e também minhas soft skills.
+            Minha jornada no desenvolvimento full stack me proporcionou uma
+            valiosa experiência na compreensão de processos e na resolução de
+            problemas complexos. Ao longo desse tempo, busquei constantemente
+            entregar soluções de alta qualidade, Sempre estou em busca de
+            aprimorar minhas habilidades técnicas e também minhas soft skills.
           </Subtitle>
           <Subtitle>
             Estou sempre empenhado em aprender e crescer profissionalmente!
