@@ -1,58 +1,44 @@
-import Stamp from 'components/Stamp'
+import { ArrowUpRight } from 'lucide-react'
 import * as S from './styles'
 
 export type ProjectProps = {
   id?: string | number
-  isHighlighted?: boolean
   name: string
   description: string
   link: string
   photo: string
   repo: string
-  topics: string[]
+  order: number
 } & S.WrapperProps
 
 const Project = ({
-  isHighlighted = false,
-  link,
+  repo,
   photo,
   name,
   description,
-  topics,
+  order,
+  link,
 }: ProjectProps) => {
-  const createLink = (name: string) => {
-    return `https://${name}.vercel.app/`
-  }
-
-  const filteredTopics = topics.filter((topic, index) => topic !== 'port')
-
   return (
-    <S.Wrapper>
-      <S.PhotoWrapper>
+    <S.Wrapper order={order}>
+      <S.PhotoWrapper
+        onClick={() => {
+          window.open(repo, '_blank')
+        }}
+      >
         <img alt={name} src={photo} />
-        {isHighlighted && (
-          <S.StampWrapper>
-            <S.PremiumStamp />
-            <Stamp />
-          </S.StampWrapper>
-        )}
       </S.PhotoWrapper>
       <S.ProjectInfo>
-        <S.Tags>
-          {filteredTopics.map((topic, index) => (
-            <S.Tag key={index}>{topic}</S.Tag>
-          ))}
-        </S.Tags>
-        <S.Title>{name}</S.Title>
-        <S.Description>{description}</S.Description>
+        <S.ProjectInfoName>
+          <S.Title>{name}</S.Title>
+          <S.Description>{description} </S.Description>
+          <S.LinkDeploy href={link} target="_blank" rel="noreferrer">
+            ver projeto
+          </S.LinkDeploy>
+        </S.ProjectInfoName>
         <S.Links>
-          <S.ProjectLink href={link} target="_blank">
-            <S.GitHubIcon />
-            {name}
-          </S.ProjectLink>
-          <S.ProjectLink href={createLink(name)} target="_blank">
-            <S.LineLinkIcon />
-            Preview
+          <S.ProjectLink href={repo} target="_blank">
+            <ArrowUpRight strokeWidth={1} />
           </S.ProjectLink>
         </S.Links>
       </S.ProjectInfo>

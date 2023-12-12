@@ -8,10 +8,19 @@ import { useState } from 'react'
 
 const jobs = [
   {
+    company: 'Beuni tecnologia',
+    companyLogo: '/img/frecompany.jpeg',
+    job: 'FullStack Developer',
+    period: '2023 - atual',
+    Description: `
+      O Beuni é uma empresa de tecnologia e inovação a de compra, armazenamento e envio de brindes e produtos. Atuo no time como responsável pelo front end implementando novas features e melhorado a experiência dos usuários.
+    `,
+  },
+  {
     company: 'TeamSoft Tecnologia e Sistemas',
     companyLogo: '/img/tscompany.jpeg',
     job: 'Front-end Developer',
-    period: '2022 - atual',
+    period: '2022 - 2023',
     Description: `
       Como Desenvolvedor Frontend, melhoro a experiência do usuário através da
       criação de Front end e da implementação de novas funcionalidades,
@@ -68,17 +77,23 @@ const About = () => {
     <S.Wrapper id="about">
       <S.LeftSide>
         <S.Description>
-          <Title>O lado pessoal</Title>
+          <Title>Quem sou eu</Title>
           <Subtitle>
-            Desde que iniciei minha jornada no desenvolvimento Front-end e
-            Full-stack, tenho me empenhado em aprender e aplicar as melhores
-            práticas, visando entregar projetos robustos e eficientes.
-            <br />
-            <br />
-            Quando não estou codificando, é possível me encontrar envolvido em
-            jogos ou imerso na leitura de livros de ficção científica. Essa é a
-            forma como equilibro minha vida profissional com minha paixão por
-            outras atividades.
+            Olá! Sou um profissional apaixonado por tecnologia, meu contato com
+            tecnologia começou designer gráfico. Tive a oportunidade de
+            mergulhar no universo do desenvolvimento web, onde pude participar e
+            desenvolver minhas habilidades em UX/UI. Hoje posso aproveita todo
+            esse conhecimento como designer no mundo do desenvolvimento
+          </Subtitle>
+          <Subtitle>
+            Minha jornada no desenvolvimento me proporcionou uma valiosa
+            experiência na compreensão de processos e na resolução de problemas
+            complexos. Ao longo desse tempo, busquei constantemente entregar
+            soluções de alta qualidade, Sempre estou em busca de aprimorar
+            minhas habilidades técnicas e também minhas soft skills.
+          </Subtitle>
+          <Subtitle>
+            Estou sempre empenhado em aprender e crescer profissionalmente!
           </Subtitle>
         </S.Description>
       </S.LeftSide>

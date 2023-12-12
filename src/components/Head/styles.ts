@@ -40,28 +40,28 @@ export const IconWrapper = styled.a`
 
 export const GitHubIcon = styled(AiFillGithub)`
   ${({ theme }) => css`
-    font-size: ${theme.font.sizes.xlarge};
+    font-size: ${theme.font.sizes.xxlarge};
     color: inherit;
   `}
 `
 
 export const LinkedInIcon = styled(AiFillLinkedin)`
   ${({ theme }) => css`
-    font-size: ${theme.font.sizes.xlarge};
+    font-size: ${theme.font.sizes.xxlarge};
     color: inherit;
   `}
 `
 
 export const InstagramIcon = styled(AiFillInstagram)`
   ${({ theme }) => css`
-    font-size: ${theme.font.sizes.xlarge};
+    font-size: ${theme.font.sizes.xxlarge};
     color: inherit;
   `}
 `
 
 export const TwitterIcon = styled(AiFillTwitterSquare)`
   ${({ theme }) => css`
-    font-size: ${theme.font.sizes.xlarge};
+    font-size: ${theme.font.sizes.xxlarge};
     color: inherit;
   `}
 `

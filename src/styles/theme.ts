@@ -9,7 +9,7 @@ const PROJECT_CONFIG = {
   viewPorts: {
     mobile: '320px',
     tablet: '768px',
-    desktop: '1280px',
+    desktop: '1064px',
     large: '1440px',
   },
   spacings: {

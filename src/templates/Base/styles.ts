@@ -16,16 +16,5 @@ export const Container = styled.div`
     padding: 0 ${theme.spacings.xsmall};
 
     position: relative;
-    &:before {
-      content: '';
-      position: absolute;
-      display: block;
-      right: 0;
-      width: 500px;
-      height: 500px;
-      filter: blur(250px);
-      background: ${theme.colors.primary.gradient[100]};
-      opacity: 0.6;
-    }
   `}
 `

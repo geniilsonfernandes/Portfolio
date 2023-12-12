@@ -19,11 +19,9 @@ export async function getServerSideProps() {
 
   const user = {
     userPhoto: repos[0].owner.avatar_url,
-    title: 'Desenvolvedor Full Stack',
-    subtitle: `Sou um desenvolvedor front-end com 2 anos de experiência na criação de interfaces de usuário atraentes e
-responsivas para sites e aplicativos web.`,
-    highlight: `Tenho conhecimento em JavaScript, ReactJs, TypeScript,
-    StyledComponents, NextJs, NodeJs, Jest, Testing Library e GIT`,
+    title: 'Full stack Developer & UI Designer',
+    subtitle: `Sou um desenvolvedor apaixonado por resolver problemas complexos, buscando sempre aprimorar habilidades técnicas e criar experiências impactantes.`,
+    highlight: `Tenho conhecimento em Arquitetura de software · Controle de versão · Banco de dados · SCRUM · Node js · SQL · .NET · C# · AWS · Padrões de design · Docker · Prisma orm · React.js e Next.js · JavaScript / TypeScript · Redux.`,
   } as HomeProps['user']
 
   const orderedReposByMoreRecent = repos.sort(

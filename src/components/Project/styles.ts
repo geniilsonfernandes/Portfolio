@@ -1,21 +1,33 @@
 import styled, { css } from 'styled-components'
 
-import { AiOutlineLink, AiFillGithub } from 'react-icons/ai'
+import { AiFillGithub, AiOutlineLink } from 'react-icons/ai'
 import { MdWorkspacePremium } from 'react-icons/md'
-import { Box } from 'components/styles'
 
 export type WrapperProps = {
   size?: 'small' | 'large'
 }
 
-export const Wrapper = styled(Box)``
+type ProjectProps = {
+  order: number
+}
+
+export const Wrapper = styled.div<ProjectProps>`
+  ${({ order }) => css`
+    position: sticky;
+    top: ${order * 10 + 30}px;
+    z-index: 1;
+    box-shadow: 0px -7px 20px 13px rgb(24 24 24 / 76%);
+    overflow: hidden;
+    border-radius: 16px;
+  `}
+`
 
 export const PhotoWrapper = styled.div<WrapperProps>`
   ${({ theme }) => css`
     background: ${theme.colors.background[200]};
     border-radius: ${theme.radius.md};
     width: 100%;
-    height: 100px;
+    height: 60vh;
     position: relative;
     cursor: pointer;
 
@@ -23,7 +35,12 @@ export const PhotoWrapper = styled.div<WrapperProps>`
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: ${theme.radius.md};
+      transition: all 0.3s ease-in-out;
+    }
+    &:hover {
+      img {
+        transform: scale(1.01);
+      }
     }
   `}
 `
@@ -49,36 +66,52 @@ export const StampWrapper = styled.div`
 
 export const Title = styled.h1<WrapperProps>`
   ${({ theme }) => css`
-    font-size: ${theme.font.sizes.xxlarge};
+    font-size: ${theme.font.sizes.xlarge};
+    font-weight: ${theme.font.normal};
     color: ${theme.colors.text[100]};
 
     text-transform: capitalize;
   `}
 `
 
+export const ProjectInfoName = styled.div`
+  ${({ theme }) => css``}
+`
 export const ProjectInfo = styled.div<WrapperProps>`
   ${({ theme }) => css`
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
     gap: ${theme.spacings.xxsmall};
-    padding-top: ${theme.spacings.xxsmall};
+    padding: ${theme.spacings.small} 0;
+    background: ${theme.colors.background[900]};
+    border-radius: ${theme.radius.md};
   `}
 `
 
+export const LinkDeploy = styled.a`
+  ${({ theme }) => css`
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    font-size: ${theme.font.sizes.small};
+    padding-top: 16px;
+  `}
+`
 export const Description = styled.p`
   ${({ theme }) => css`
     color: ${theme.colors.text[600]};
     font-size: ${theme.font.sizes.small};
-    text-align: justify;
-    line-height: 1.5;
+
+    line-height: 1.7;
+    padding-top: ${theme.spacings.xsmall};
+    max-width: 80%;
   `}
 `
 
 export const Links = styled.div`
   display: flex;
-  justify-content: space-between;
-
-  padding-top: 16px;
 `
 
 export const GitHubIcon = styled(AiFillGithub)`
@@ -98,8 +131,12 @@ export const ProjectLink = styled.a`
     display: flex;
     align-items: center;
     gap: 8px;
-    color: ${theme.colors.primary[100]};
-    font-size: ${theme.font.sizes.small};
+    color: #fff;
+
+    border-radius: 100%;
+    padding: 8px 8px;
+    border: 1px solid #fff;
+    font-size: ${theme.font.sizes.xhuge};
 
     transition: ${theme.transitions.bounce};
 
