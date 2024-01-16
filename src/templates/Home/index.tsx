@@ -14,6 +14,15 @@ export type HomeProps = {
 const portfolio = [
   {
     description:
+      'CRM Dashboard é um dashboard para gestão de vendas de assinaturas. Neste projeto, foi utilizado o Docker para simular ambientes de produção e desenvolvimento. Além disso, o Redis e o BullMQ estão sendo empregados para o processamento de dados de maneira assíncrona e paralela.',
+    id: '23245433434frefdfd',
+    link: 'https://github.com/geniilsonfernandes/crm-dashboard',
+    name: 'CRM Dashboard',
+    photo: './img/crm_app.png',
+    repo: 'https://github.com/geniilsonfernandes/crm-dashboard',
+  },
+  {
+    description:
       'Money Guard é um aplicativo de controle financeiro focado na gestão mensal, estabelecendo metas e tendo como ponto central o salário do usuário. Com ele, podemos acompanhar de forma mais eficiente o que recebemos, estabelecer objetivos e economizar nossa graninha.',
     id: '23245433434f',
     link: 'https://github.com/geniilsonfernandes/moneyguard',
