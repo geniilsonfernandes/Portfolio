@@ -72,7 +72,6 @@ const Home = ({ user }: HomeProps) => {
   return (
     <Base>
       <Head {...user} />
-
       <S.Wrapper id="projetos">
         <S.Projects>
           {portfolio.map((item, i) => (
