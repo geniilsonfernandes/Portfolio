@@ -28,7 +28,7 @@ const portfolio = [
     id: '23245433434ffsfsfdsdfasddsadrefdfd',
     link: 'https://github.com/geniilsonfernandes/just-travel',
     name: 'Just travel',
-    photo: 'https://github.com/geniilsonfernandes/just-travel/blob/master/ui_02.png',
+    photo: './img/just.png',
     repo: 'https://github.com/geniilsonfernandes/just-travel',
   },
   {
