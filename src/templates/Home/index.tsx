@@ -2,8 +2,8 @@ import Head, { HeadProps } from 'components/Head'
 import Project, { ProjectProps } from 'components/Project'
 import * as S from './styles'
 
-import Base from 'templates/Base'
 import About from 'components/About'
+import Base from 'templates/Base'
 
 export type HomeProps = {
   repoHighlights: Omit<ProjectProps, 'size' | 'isHighlighted'>
@@ -20,6 +20,24 @@ const portfolio = [
     name: 'CRM Dashboard',
     photo: './img/crm_app.png',
     repo: 'https://github.com/geniilsonfernandes/crm-dashboard',
+  },
+  {
+    description:
+      'Money Guard é um aplicativo de controle financeiro focado na gestão mensal, estabelecendo metas e tendo como ponto central o salário do usuário. Com ele, podemos acompanhar de forma mais eficiente o que recebemos, estabelecer objetivos e economizar nossa graninha.',
+    id: '23245433434f',
+    link: 'https://github.com/geniilsonfernandes/moneyguard',
+    name: 'Money Guard',
+    photo: './img/money_app.png',
+    repo: 'https://github.com/geniilsonfernandes/moneyguard',
+  },
+  {
+    description:
+      'Just trave é um app para gestão de vendas de ingressos. Neste projeto, foi utilizado o Next js para o desenvolvimento. Além disso, foi orientado a testes e documentação com storybook.',
+    id: '23245433434ffsfsfdsdfasddsadrefdfd',
+    link: 'https://github.com/geniilsonfernandes/just-travel',
+    name: 'Just travel',
+    photo: './img/crm_app.png',
+    repo: 'https://github.com/geniilsonfernandes/just-travel',
   },
   {
     description:
