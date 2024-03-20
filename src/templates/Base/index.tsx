@@ -1,6 +1,6 @@
+import Footer from 'components/Footer'
 import Header from 'components/Header'
 import * as S from './styles'
-import Footer from 'components/Footer'
 
 type BaseProps = {
   children: React.ReactNode

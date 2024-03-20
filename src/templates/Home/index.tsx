@@ -1,9 +1,9 @@
+import { Analytics } from '@vercel/analytics/react'
+import About from 'components/About'
 import Head, { HeadProps } from 'components/Head'
 import Project, { ProjectProps } from 'components/Project'
-import * as S from './styles'
-
-import About from 'components/About'
 import Base from 'templates/Base'
+import * as S from './styles'
 
 export type HomeProps = {
   repoHighlights: Omit<ProjectProps, 'size' | 'isHighlighted'>
@@ -57,7 +57,7 @@ const portfolio = [
     name: 'Dashschool',
     photo: './img/dashschool_app.png',
     repo: 'https://github.com/geniilsonfernandes/dashschool',
-  }
+  },
   // {
   //   description:
   //     'Uma aplicação desenvolvida para praticar conceitos avançados do React, aplicar Test-Driven Development (TDD) e melhorar a qualidade do código. Além disso, explora o uso de ferramentas como Storybook para visualização otimizada dos componentes.',
@@ -81,6 +81,7 @@ const portfolio = [
 const Home = ({ user }: HomeProps) => {
   return (
     <Base>
+      <Analytics />
       <Head {...user} />
       <S.Wrapper id="projetos">
         <S.Projects>
